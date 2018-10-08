@@ -1,0 +1,24 @@
+""""
+x = Conv2D(filters=32, kernel_size=5, padding='same')(input_layer)
+x = Activation('relu')(x)
+x = Conv2D(filters=32, kernel_size=5, padding='same')(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+x = AveragePooling2D(pool_size=(2,2))(x)
+#x = MaxPool2D(pool_size=(2,2))(x)
+x = Dropout(0.25)(x)
+
+x = Conv2D(filters=64, kernel_size=3, padding='same')(x)
+x = Activation('relu')(x)
+x = Conv2D(filters=64, kernel_size=3, padding='same')(x)
+x = BatchNormalization()(x)
+x = Activation('relu')(x)
+#x = MaxPool2D(pool_size=(2,2))(x)
+x = AveragePooling2D(pool_size=(2,2))(x)
+x = Dropout(0.25)(x)
+
+x = Flatten()(x)
+x = Dense(512)(x)
+x = Activation('relu')(x)
+x = Dropout(0.5)(x)
+""""
